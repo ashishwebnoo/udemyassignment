@@ -18,4 +18,9 @@ class Post extends Model
     {
     	return $query->orderBy(static::CREATED_AT, 'desc');
     }
+
+    public function scopeRandom(Builder $query)
+    {
+    	return $query->inRandomOrder();
+    }
 }

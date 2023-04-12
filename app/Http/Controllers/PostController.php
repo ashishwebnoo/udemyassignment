@@ -15,4 +15,12 @@ class PostController extends Controller
     	      }])->findOrFail(),
           ]);
     }
+
+    public function random($id)
+    {
+    	return view('random.show', ['post' => Post::with(['comments' => function($query){
+    			return $query->random();
+    	      }])->findOrFail(),
+          ]);
+    }
 }
