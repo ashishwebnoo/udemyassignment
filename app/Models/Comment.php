@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 
 class Comment extends Model
 {
-	protected $fillables = ['comment', 'post_id'];
+	protected $fillable = ['comment', 'post_id'];
 
     public function post()
     {

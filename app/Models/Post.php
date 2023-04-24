@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Builder;
 
 class Post extends Model
 {
-    protected $fillables = ['title', 'content'];
+    protected $fillable = ['titel', 'content'];
 
     public function comments()
     {
@@ -24,3 +24,5 @@ class Post extends Model
     	return $query->inRandomOrder();
     }
 }
+
+
