@@ -1,17 +1,20 @@
 <?php
-
+ 
 namespace App\Http\Controllers;
-
+ 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Models\User;
-use Auth;
-
+use Illuminate\Support\Facades\Redis;
+use Illuminate\View\View;
+ 
 class UserController extends Controller
 {
-    public function index()
+    /**
+     * Show the profile for the given user.
+     */
+    public function show(string $id): View
     {
-        $user_data=User::all();
-        return view('user.list',compact('user_data'));
+        return view('user.profile', [
+            'user' => Redis::get('user:profile:'.$id)
+        ]);
     }
 }

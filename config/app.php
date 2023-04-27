@@ -208,8 +208,12 @@ return [
     |
     */
 
-    'aliases' => Facade::defaultAliases()->merge([
+    //'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
-    ])->toArray(),
+    //])->toArray(),
+
+    'aliases' => Facade::defaultAliases()->merge([
+    'Redis' => Illuminate\Support\Facades\Redis::class,
+])->toArray(),
 
 ];
