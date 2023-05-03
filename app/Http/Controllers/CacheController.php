@@ -56,7 +56,7 @@ class CacheController extends Controller
 
         return $users;
     }
-
+ 
     //return and store data in laravel default cache remember  
 
     public function getUsers($foo, $bar)
