@@ -21,7 +21,7 @@ class CacheController extends Controller
         Cache::forever("user_query_results_foo_{$foo}_bar_{$bar}", $users);
 
         return $user;
-    } 
+    }
 
     // put the data in cache for a given time
 
